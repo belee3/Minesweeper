@@ -1,5 +1,7 @@
 
 
+
+
 import de.bezier.guido.*;
 public int NUM_ROWS = 20;
 public int NUM_COLS = 20;
@@ -14,10 +16,10 @@ void setup ()
     // make the manager
     Interactive.make( this );
     
-   
+   buttons = new MSButton[NUM_ROWS][NUM_COLS];
     for(int r = 0;r<NUM_ROWS; r++)
        for(int c = 0; c<NUM_COLS; c++)
-         buttons = new MSButton[r][c];
+         buttons[r][c] = new MSButton(r,c);
     
     
     setBombs();
